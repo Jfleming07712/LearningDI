@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LearningDI
+namespace LearningDI.Interfaces
 {
-    class Tire
+    public class IMotor
     {
     }
 }

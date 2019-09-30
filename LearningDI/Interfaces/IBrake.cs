@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LearningDI
+namespace LearningDI.Interfaces
 {
-    public class Brake
+    public class IBrake
     {
+
     }
 }
