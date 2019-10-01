@@ -4,10 +4,12 @@ using System.Text;
 using LearningDI.Interfaces;
 
 namespace LearningDI.Models
+
+
 {
-    public class Tire: ITire
+    public class Tire : ITire
     {
-        private int RollSpeed { get; set; } = 0;
+        public int RollSpeed { get; set; } = 0;
 
         public void CalcRollSPeed(int RPM, int direction)
         {
@@ -17,7 +19,7 @@ namespace LearningDI.Models
 
             this.RollSpeed = rollSpeed;
         }
-        
+
         public int GetRollSpeed(int RPM, int direction)
         {
             this.CalcRollSPeed(RPM, direction);

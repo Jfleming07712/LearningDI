@@ -5,11 +5,11 @@ using LearningDI.Interfaces;
 
 namespace LearningDI.Models
 {
-    public class Transmission: ITransmission
+    public class Transmission : ITransmission
     {
-        private int Direction { get; set; } = 0;
+        public int Direction { get; set; } = 0;
 
-        internal void ChangeDirection(string direction)
+        public void ChangeDirection(string direction)
         {
             switch (direction)
             {
@@ -35,7 +35,7 @@ namespace LearningDI.Models
             }
         }
 
-        internal int GetDirection()
+        public int GetDirection()
         {
             return Direction;
         }

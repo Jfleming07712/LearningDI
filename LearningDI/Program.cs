@@ -19,6 +19,7 @@ namespace LearningDI
             container.Register<IMotor, Motor>();
             container.Register<ITire, Tire>();
             container.Register<ITransmission, Transmission>();
+            container.Register<ICar, Car>();
 
 
             // 3. Verify your configuration
@@ -27,7 +28,14 @@ namespace LearningDI
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var car = container.GetInstance<ICar>();
+
+            car.StartCar();
+
+            car.ChangeDirection();
+
+            car.Accelerate();
+
         }
     }
 }

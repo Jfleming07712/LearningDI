@@ -5,21 +5,21 @@ using LearningDI.Interfaces;
 
 namespace LearningDI.Models
 {
-    public class Motor: IMotor
+    public class Motor : IMotor
     {
-        private int RPM { get; set; } = 1000;
+        public int RPM { get; set; } = 1000;
 
-        internal void ThrottleUp()
+        public void ThrottleUp()
         {
             this.RPM = RPM + 1000;
         }
 
-        internal void ThrottleDown()
+        public void ThrottleDown()
         {
             this.RPM = RPM - 1000;
         }
 
-        internal int GetRPM()
+        public int GetRPM()
         {
             return RPM;
         }

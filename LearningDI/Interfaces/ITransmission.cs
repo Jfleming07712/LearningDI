@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LearningDI.Interfaces
+﻿namespace LearningDI.Interfaces
 {
-    public class ITransmission
+    public interface ITransmission
     {
+        int Direction { get; set; }
+        void ChangeDirection(string direction);
+
+        int GetDirection();
     }
 }

@@ -1,18 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LearningDI.Interfaces;
+using LearningDI.Models;
 
 namespace LearningDI.Models
 {
-    public class Car
+    public class Car : ICar
     {
-        public Motor Motor { get; set; }
-        public Brake Brake { get; set; }
-        public Transmission Transmission { get; set; }
-        public Tire Tire { get; set; }
+        public IMotor Motor { get; set; }
+        public IBrake Brake { get; set; }
+        public ITransmission Transmission { get; set; }
+        public ITire Tire { get; set; }
         public bool IsOn { get; set; }
         public double Speed { get; set; }
 
+        public Car(IMotor motor, IBrake brake, ITransmission transmission, ITire tire)
+        {
+            this.Motor = motor;
+            this.Brake = brake;
+            this.Transmission = transmission;
+            this.Tire = tire;
+        }
 
 
         public void StartCar()
@@ -27,9 +36,10 @@ namespace LearningDI.Models
 
         public void Accelerate()
         {
+            
             this.Motor.ThrottleUp();
 
-            Console.WriteLine("the car is going" +  this.Tire.GetRollSpeed(this.Motor.GetRPM(), this.Transmission.GetDirection()) + "FPS" );
+            Console.WriteLine("the car is going" + this.Tire.GetRollSpeed(this.Motor.GetRPM(), this.Transmission.GetDirection()) + "FPS");
         }
 
         public void Decelerate()

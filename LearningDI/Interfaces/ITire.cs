@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LearningDI.Interfaces
+﻿namespace LearningDI.Interfaces
 {
-    public class ITire
+    public interface ITire
     {
+        void CalcRollSPeed(int RPM, int direction);
+        int GetRollSpeed(int RPM, int direction);
     }
 }

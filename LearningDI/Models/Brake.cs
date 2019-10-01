@@ -8,7 +8,7 @@ namespace LearningDI.Models
 {
     public class Brake: IBrake
     {
-        private int friction { get; set; } = 1000;
+        private int Friction { get; set; } = 1000;
 
     }
 }
