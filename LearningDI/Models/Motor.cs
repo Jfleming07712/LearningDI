@@ -7,7 +7,7 @@ namespace LearningDI.Models
 {
     public class Motor : IMotor
     {
-        public int RPM { get; set; } = 1000;
+        private int RPM { get; set; } = 1000;
 
         public void ThrottleUp()
         {

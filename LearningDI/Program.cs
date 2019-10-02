@@ -11,19 +11,7 @@ namespace LearningDI
 
         static Program()
         {
-            // 1. Create a new Simple Injector container
-            container = new Container();
-
-            // 2. Configure the container (register)
-            container.Register<IBrake, Brake>();
-            container.Register<IMotor, Motor>();
-            container.Register<ITire, Tire>();
-            container.Register<ITransmission, Transmission>();
-            container.Register<ICar, Car>();
-
-
-            // 3. Verify your configuration
-            container.Verify();
+            container = DiSetup.Setup();
         }
 
         static void Main(string[] args)

@@ -26,12 +26,24 @@ namespace LearningDI.Models
 
         public void StartCar()
         {
-            Console.WriteLine("Vroom vroom, the car is running");
+            var engineSounds = "Vroom vroom, the car is running";
+            this.IsOn = true;
+            if (this.IsOn == true)
+            {
+                Console.WriteLine(engineSounds);
+            }
+            
+
         }
 
         public void TurnOffCar()
         {
-            Console.WriteLine("Putter putter, the car is not running");
+            var engineSounds = "Putter putter, the car is not running";
+            this.IsOn = false;
+            if (this.IsOn == false)
+            {
+                Console.WriteLine(engineSounds);
+            }
         }
 
         public void Accelerate()

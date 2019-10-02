@@ -7,6 +7,7 @@ namespace LearningDI.Interfaces
 {
     public interface IMotor
     {
+        //int RPM { get; set; }
         void ThrottleUp();
         void ThrottleDown();
         int GetRPM();
